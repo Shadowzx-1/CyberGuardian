@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CyberGuardian</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="page">
+
+    <header class="header">
+      <div class="logo">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <circle cx="10" cy="10" r="8.5" stroke="currentColor" stroke-width="1.2"/>
+          <path d="M6.5 10C6.5 8.067 8.067 6.5 10 6.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          <path d="M13.5 10C13.5 11.933 11.933 13.5 10 13.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          <circle cx="10" cy="10" r="1.5" fill="currentColor"/>
+        </svg>
+        <span>CyberGuardian</span>
+      </div>
+    </header>
+
+    <main class="main">
+
+      <div class="hero">
+        <h1>Verifique antes<br>de clicar.</h1>
+        <p class="subtitle">Cole um link suspeito abaixo. A análise é feita em segundos.</p>
+      </div>
+
+      <div class="input-group">
+        <input
+          type="text"
+          id="urlInput"
+          class="url-input"
+          placeholder="https://exemplo.com/link-suspeito"
+          autocomplete="off"
+          spellcheck="false"
+        />
+        <button class="btn-check" id="checkBtn" onclick="verificar()">
+          <span id="btnText">Verificar</span>
+          <span id="btnSpinner" class="btn-spinner hidden"></span>
+        </button>
+      </div>
+
+      <div id="resultArea"></div>
+
+      <div id="historyArea"></div>
+
+    </main>
+
+    <footer class="footer">
+      <p>Análise local + IA &mdash; nenhum link é armazenado.</p>
+    </footer>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
